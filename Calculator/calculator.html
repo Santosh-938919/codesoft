@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+
+<style>
+
+body{
+
+  margin: 0;
+  padding: 0;
+  /* background:url("/image/developer.png"); */
+ background-position: center;
+ background-color: rgb(37, 151, 212);
+
+}
+
+
+
+
+
+.center
+{
+  
+  
+  text-align: center;
+}
+.container
+{
+
+  text-align: center;
+  margin-top: 23px;
+}
+table{
+  margin: auto;
+}
+
+input{
+  font-size: 30px;
+  border:5px solid rgb(103, 94, 94);
+  border-radius: 12px;
+}
+button
+{
+  font-size: 40px;
+  background-color: rgb(227, 227, 14);
+  width: 83px;
+  height: 68px;
+  border-radius: 12px;
+}
+.calculator
+{
+  display: inline-block;
+  border:6px solid rgb(9, 2, 2);
+  background-color: rgba(255, 255, 255,0.5);
+  padding: 12px;
+  border-radius: 12px;
+ 
+}
+
+
+</style>
+
+</head>
+<body>
+  
+<h1 class="center"> Calculator Using Html,Css & Js</h1>
+<div class="container">
+  <div class="calculator">
+
+    <input type="text" id="screen">
+  <table>
+    <tr>
+
+      <td><button>(</button></td>
+    <td><button>)</button></td>
+  <td><button>C</button></td>
+<td><button>%</button></td>
+</tr>
+<tr>
+  
+    <td><button>7</button></td>
+  <td><button>8</button></td>
+<td><button>9</button></td>
+<td><button>x</button></td>
+</tr>
+<tr>
+  
+  <td><button>4</button></td>
+<td><button>5</button></td>
+<td><button>6</button></td>
+<td><button>+</button></td>
+</tr>
+<tr>
+  <td><button>1</button></td>
+<td><button>2</button></td>
+<td><button>3</button></td>
+<td><button>-</button></td>
+</tr>
+<tr>
+  <td><button>0</button></td>
+<td><button>.</button></td>
+<td><button>=</button></td>
+<td><button>/</button></td>
+
+</tr>
+</table>
+</div>
+</div>
+
+<!-- javascript code  is here  -->
+<script>
+
+let Screen = document.getElementById('screen');
+buttons = document.querySelectorAll('button');
+
+let screenvalue='';
+
+for(item of buttons)
+{
+  item.addEventListener('click',(e) =>
+{
+  buttonText = e.target.innerText;
+  console.log('button text is ',buttonText);
+  if(buttonText=='x')
+  {
+    buttonText='*';
+    screenvalue += buttonText;
+    Screen.value = screenvalue;
+  }
+
+  else if (buttonText=='C')
+  {
+    screenvalue = " ";
+    Screen.value = screenvalue;
+
+  }
+  
+  else if (buttonText=='=')
+  {
+    Screen.value = eval(screenvalue);
+  }
+
+  else{
+  
+    screenvalue += buttonText;
+    Screen.value = screenvalue;
+  }
+})
+}
+</script>
+</body>
+</html>

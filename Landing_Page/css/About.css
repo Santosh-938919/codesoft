@@ -1,0 +1,40 @@
+Blueish dark theme variables
+:root {
+  --primary-color: #1A1A1A;
+  --secondary-color: #212121;
+  --accent-color: #007BFF;
+  --background-color: #1A1A1A;
+  --text-color: #FFFFFF;
+}
+
+.about-us {
+  background-color: var(--background-color);
+  padding: 2rem;
+}
+
+.about-us-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--text-color);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.about-us-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about-us-text {
+  font-size: 1rem;
+  color: var(--text-color);
+  width: 50%;
+}
+
+.about-us-image {
+  width: 40%;
+  height: auto;
+  border-radius: 5px;
+} 
+
